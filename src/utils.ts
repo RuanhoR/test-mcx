@@ -1,6 +1,6 @@
 import fs from "node:fs/promises"
-module.exports = class McxUtlis {
-  static async FileExsit(path: string): boolean {
+export default class McxUtlis {
+  public static async FileExsit(path: string): boolean {
     try {
       await fs.access(path);
       return true
@@ -8,7 +8,7 @@ module.exports = class McxUtlis {
       return false
     }
   }
-  static async readFile(filePath: string, opt: object = {}): object || string {
+  public static async readFile(filePath: string, opt: object = {}): object || string {
     const opts = {
       maxRetries: 5,
       delay: 200,
@@ -37,7 +37,7 @@ module.exports = class McxUtlis {
     }
     return {};
   }
-  static sleep(time: number): Promise<void> {
+  public static sleep(time: number): Promise<void> {
     return new Promise((then) => setTimeout(then, time))
   }
 }
