@@ -1,8 +1,7 @@
 import * as Parser from "@babel/parser"
+import type { McxOpt } from "../types.ts"
 export default class Compile {
-  constructor(public code: string) {
-    const ast = Parser.parse(code, {
-      sourceType: "module"
-    })
+  constructor(public BuildOpt: McxOpt) {
+    
   }
 }

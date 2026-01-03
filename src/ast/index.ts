@@ -1,4 +1,4 @@
 import AST_tag from "./tag"
-export {
+export default {
   tag: AST_tag
 }
