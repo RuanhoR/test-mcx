@@ -1,7 +1,7 @@
-import AST from "./ast/index.ts";
-import compiler from "./compile-mcx/index.ts";
-import utils from "./utils.ts";
-import errors from "./errors.ts"
+import AST from "./ast/index.js";
+import compiler from "./compile-mcx/index.js";
+import utils from "./utils.js";
+import errors from "./errors.js"
 export default {
   load: compiler,
   AST: AST,
