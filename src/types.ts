@@ -7,6 +7,7 @@ interface McxOpt {
   buildDir: string
   main: string
   BabelOpt: ParserOptions
+  cacheDir : string
 }
 type ParseReadFileOpt = {
   delay: number;
@@ -51,7 +52,7 @@ type JsType = "number" | "string" | "object" | "function" | "bigint" | "symbol"
 interface TypeVerifyBody {
   [key: string]: JsType
 }
-export {
+export type {
   ParseReadFileOpt,
   ReadFileOpt,
   McxOpt,
@@ -65,5 +66,7 @@ export {
   TokenType,
   ParsedTagContentNode,
   TypeVerifyBody,
-  JsType
+  JsType,
+  PropNode,
+  ParsedTagNode
 }

@@ -217,8 +217,7 @@ class Lexer {
       });
       this.booleanProxyCache.set(this, proxy);
     }
-    return this.booleanProxyCache.get(this) as Record < string,
-    boolean > ;
+    return this.booleanProxyCache.get(this) as Record < string, boolean > ;
   }
 }
 export default class McxAst {
@@ -227,8 +226,14 @@ export default class McxAst {
   constructor(text: string) {
     this.text = text;
   }
-  get data(): ParsedTagNode[] {
+  private getAST(): ParsedTagNode[] {
     const lexer = new Lexer(this.text);
     return Array.from(lexer.tokens);
+  }
+  get data(): ParsedTagNode[] {
+    return this.getAST();
+  }
+  parseAST(): ParsedTagNode[] {
+    return this.getAST();
   }
 }

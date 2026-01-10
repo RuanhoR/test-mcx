@@ -10,7 +10,7 @@
     "declaration": false,
     "declarationMap": false,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,,
+    "exactOptionalPropertyTypes": true,
     "allowJs": true,
     "strict": true,
     "moduleResolution": "nodenext",
@@ -18,6 +18,6 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }

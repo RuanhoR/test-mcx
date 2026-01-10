@@ -29,7 +29,7 @@ export class Lexer {
               type: "PropChar"
             }
             yield propNode;
-          } else if (currStatus === STATUS[1] && key && !value) {} else if (currStatus === STATUS[0] && key) {}
+          } else if (currStatus === STATUS[0] && key) {}
           key = "";
           value = "";
           hasEquals = false;
